@@ -16,40 +16,6 @@
 - 📊 **Effect visualization** and dependency graphs
 - 💪 **TypeScript support** with full type safety
 
-flowchart LR
-    Dev[React Developer]
-
-    subgraph App["React Application"]
-        Components[React Components]
-        Hooks[useSmartEffect Hooks]
-    end
-
-    subgraph Core["react-smart-effect Core"]
-        Analyzer[Dependency Analyzer]
-        Comparator[Deep Compare Engine]
-        Scheduler[Effect Scheduler]
-        Logger[Debug & Logger]
-    end
-
-    subgraph Tooling["Dev & Build Tooling"]
-        DevTools[Runtime DevTools]
-        Babel[Babel Plugin]
-        Vite[Vite Plugin]
-    end
-
-    Components --> Hooks
-    Hooks --> Analyzer
-    Analyzer --> Comparator
-    Comparator --> Scheduler
-    Scheduler --> Logger
-
-    Hooks --> DevTools
-    Babel --> Analyzer
-    Vite --> Analyzer
-
-    Logger --> Dev
-  
-
 ## Installation
 
 ```bash
